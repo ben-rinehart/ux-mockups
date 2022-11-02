@@ -1,0 +1,74 @@
+/* Spinner */
+.loading {
+  animation: clockwise 1.5s linear infinite;
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 4em;
+  height: 4em;
+}
+
+.loading-sm{
+  width: 2em;
+  height: 2em;
+}
+
+.loading,
+.loading:before,
+.loading:after {
+  border: .2em solid transparent;
+  border-radius: 50%;
+  border-top-color: #3196b2;
+  margin: auto;
+}
+
+.loading:before,
+.loading:after {
+  content: '';
+  position: absolute;
+}
+
+.loading:before {
+  animation: anticlockwise .9s linear infinite;
+  top: -.6em;
+  right: -.6em;
+  bottom: -.6em;
+  left: -.6em;
+}
+
+.loading:after {
+  animation: anticlockwise .66s linear infinite;
+  top: .3em;
+  right: .3em;
+  bottom: .3em;
+  left: .3em;
+}
+
+@keyframes clockwise {
+  0%  { transform: rotate(0deg) }
+  100%{ transform: rotate(360deg) }
+}
+
+@keyframes anticlockwise {
+  0%  { transform: rotate(360deg) }
+  100%{ transform: rotate(0deg) }
+}
+
+.btn .loading{
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  border-width: .1em;
+}
+.btn .loading:before {
+  top: -.4em;
+  right: -.4em;
+  bottom: -.4em;
+  left: -.4em;
+  border-width: .1em;
+}
+.btn .loading:after{ border: none; }
+.btn-primary .loading,
+.btn-primary .loading:before{ border-top-color: #fff; }
+.btn-secondary .loading,
+.btn-secondary .loading:before{ border-top-color: #727a8e; }

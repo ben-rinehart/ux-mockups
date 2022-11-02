@@ -1,0 +1,85 @@
+.btn-secondary {
+  border-color: rgba(114, 122, 142, 0.4);
+  color: #727a8e;
+}
+.btn-secondary:hover {
+  background-color: #cfcfd2;
+  border-color: rgba(114, 122, 142, 0.4);
+  color: #50586c;
+}
+/* overriding for greater contrast with page background */
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle,
+.btn-secondary:focus,
+.btn-secondary.focus {
+  background-color: #bebec1;
+  border-color: #adadb0;
+}
+.btn-secondary.disabled,
+.btn-secondary:disabled,
+.btn-secondary.disabled:hover,
+.btn-secondary:disabled:hover {
+  color: #767a7e;
+  background-color: #cfcfd2;
+  border-color: #bebec1;
+}
+
+/* Data Badge */
+.csg-data-badge {
+  position: relative;
+}
+
+.csg-data-badge[data-badge]:before {
+  content: attr(data-badge);
+  position: absolute;
+  top: -.6rem;
+  right: -.6rem;
+  font-size: .7rem;
+  color: white;
+  width: 1.2rem;
+  height: 1.2rem;
+  text-align: center;
+  line-height: 1.2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+.nav-link.csg-data-badge[data-badge]:before {
+  right: 0;
+  top: -.5rem;
+}
+
+.flex-column > .nav-link.csg-data-badge[data-badge]:before {
+  top: .25rem;
+  right: .25rem;
+}
+
+.csg-data-badge-dark[data-badge]:before {
+  background-color: rgba(52,58,64,1);
+}
+
+.csg-data-badge-primary[data-badge]:before {
+  background-color: rgba(49,150,178,1);
+}
+
+.csg-data-badge-secondary[data-badge]:before {
+  background-color: #dddfe4;
+  color: #727a8e;
+}
+
+.csg-data-badge-danger[data-badge]:before {
+  background-color: rgba(229,78,40,1);
+}
+
+.csg-data-badge-warning[data-badge]:before {
+  background-color: rgba(216,150,19,1);
+}
+
+.csg-data-badge-info[data-badge]:before {
+  background-color: rgba(86,105,131,1);
+}
+
+.csg-data-badge-success[data-badge]:before {
+  background-color: rgba(127,166,52,1);
+}

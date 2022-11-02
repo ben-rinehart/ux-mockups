@@ -1,0 +1,6 @@
+.csg-section-header {
+  font-size: 2rem;
+  background: rgba(0,0,0, 0.025);
+  padding: 0.5rem 1rem;
+  border-left: 4px solid;
+}

@@ -1,0 +1,38 @@
+/* Dropdown */
+.dropdown-toggle::after {
+  vertical-align: 0;
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  border-top: none;
+  border-left: 1px solid rgba(255, 255, 255, .5);
+  padding-left: .5rem;
+  margin-left: .5rem;
+}
+.btn-secondary.dropdown-toggle::after{
+  border-left: 1px solid rgba(0, 0, 0, .25);
+}
+.btn-link.dropdown-toggle::after{
+  border-left: none;
+}
+
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: none;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  top: auto;
+}
+
+.dropdown .dropdown-menu.show {
+  /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #fff;
+  background-color: #3196b2;
+}

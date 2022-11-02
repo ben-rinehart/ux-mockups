@@ -1,0 +1,19 @@
+/* Toast */
+.toast-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.toast {
+  background-color: #fff;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: .3s ease 0s;
+  transition: .3s ease 0s;
+}
+
+.show.toast {
+  height: auto;
+  opacity: 1;
+}

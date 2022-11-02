@@ -1,0 +1,10 @@
+/* pagination */
+.page-link {
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+}
+.page-item.active .page-link {
+  background-color: #727a8e;
+  border-color: #727a8e;
+}

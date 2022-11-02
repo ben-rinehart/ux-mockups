@@ -1,0 +1,14 @@
+/* modal */
+.modal {
+  top: 100%;
+  display: block;
+  -webkit-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+}
+.modal.show {
+  top: 0;
+}
+.modal-backdrop {
+  -webkit-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+}

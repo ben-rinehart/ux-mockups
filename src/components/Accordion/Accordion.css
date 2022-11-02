@@ -1,0 +1,14 @@
+/* Accordion */
+.csg-accordion-section {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: block;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+.csg-accordion-section.show {
+  height: auto;
+  opacity: 1;
+}

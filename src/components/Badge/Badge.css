@@ -1,0 +1,29 @@
+
+.badge-secondary {
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #dddfe4;
+}
+.badge {
+  color: rgba(0, 0, 0, 0.65);
+}
+.badge-dark {
+  background-color: rgba(52, 58, 64, 0.5);
+}
+.badge-primary {
+  background-color: rgba(49, 150, 178, 0.5);
+}
+.badge-secondary {
+  background-color: #dddfe4;
+}
+.badge-danger {
+  background-color: rgba(229, 78, 40, 0.5);
+}
+.badge-warning {
+  background-color: rgba(216, 150, 19, 0.5);
+}
+.badge-info {
+  background-color: rgba(86, 105, 131, 0.5);
+}
+.badge-success {
+  background-color: rgba(127, 166, 52, 0.5);
+}

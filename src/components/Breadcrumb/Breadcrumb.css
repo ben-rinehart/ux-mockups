@@ -1,0 +1,12 @@
+/* breadcrumbs */
+.breadcrumb {
+  background-color: transparent;
+}
+.breadcrumb .active a {
+  color: #6c757d;
+  cursor: default;
+  text-decoration: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "‣";
+}

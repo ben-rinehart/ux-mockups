@@ -1,0 +1,32 @@
+/* Multiselect Overrides */
+.csg-select{
+  width: 100%;
+}
+
+.csg-select__indicator span{
+  color: #727a8e !important;
+}
+
+.csg-select__control--is-focused{
+  color: #495057;
+  background-color: #fff;
+  border-color: #85cadd !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(49, 150, 178, 0.25) !important;
+}
+
+.csg-select__option{
+  background-color: #fff !important;
+  color: #495057 !important;
+}
+.csg-select__option--is-focused{
+  background-color: rgba(49, 150, 178, 0.25) !important;
+}
+.csg-select__multi-value{
+  background-color: #dddfe4 !important;
+  border-radius: .25rem;
+}
+.csg-select__multi-value__remove:hover{
+  background-color: #E54E28 !important;
+  color: #fff !important;
+}
