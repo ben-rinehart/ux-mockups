@@ -47,6 +47,9 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "react-select": "^5.5.9"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",

@@ -1,7 +1,7 @@
 import React from "react";
+import Formgroup from "../components/Formgroup";
 import Button from "../components/Button";
 import Icon from "../components/Icon";
-import Formgroup from "../components/Formgroup";
 
 export default {
   title: "Mockups",
@@ -9,6 +9,7 @@ export default {
 
 export const EAPP4915 = (args) => (
   <div className="container">
+
     <div className="row">
       <div className="col-md">
         <Formgroup
@@ -72,8 +73,9 @@ export const EAPP4915 = (args) => (
           inputID="numberID"
           inputLabel="Quantity Taken Each Time"
           textfieldType="number"
-          textfieldMin={1}
-          textfieldMax={10}
+          inputValue="1"
+          textfieldMin="1"
+          textfieldMax="10"
           isInputRequired
         />
       </div>
@@ -83,8 +85,9 @@ export const EAPP4915 = (args) => (
           inputID="numberID"
           inputLabel="Number of Times Taken"
           textfieldType="number"
-          textfieldMin={1}
-          textfieldMax={10}
+          inputValue="1"
+          textfieldMin="1"
+          textfieldMax="10"
           isInputRequired
         />
       </div>

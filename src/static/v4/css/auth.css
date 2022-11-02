@@ -1,0 +1,206 @@
+/* Styles for [/auth] */
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #393f4f url("/static/v4/img/auth/auth-bg.png") top center repeat;
+  /*background: #393f4f;*/
+  background-size: 69px 100px;
+  /*color: #777;*/
+}
+
+body.background-light {
+  background: #f1f2f4 url("/static/v4/img/auth/auth-light-bg.png") top center
+    repeat;
+  background-size: 69px 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Roboto", Tahoma, sans-serif;
+}
+
+hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary,
+.btn-info {
+  color: #ffffff;
+  background-color: #3096b1;
+  border-color: #2b859d;
+}
+
+.btn-primary:hover,
+.btn-info:hover,
+.btn-outline-primary:hover {
+  color: #ffffff;
+  background-color: #257489;
+  border-color: #1e5c6d;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #117a8b;
+  border-color: #10707f;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus,
+.btn-primary.focus,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #138496;
+  border-color: #117a8b;
+  box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-outline-primary {
+  color: #3096b1;
+  border-color: #3096b1;
+}
+
+.btn-outline-primary:hover {
+  color: #ffffff;
+  background-color: #3096b1;
+  border-color: #2b859d;
+}
+
+.form-signin > p {
+  color: #787e84;
+}
+
+.form-signin {
+  max-width: 360px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin .input-group-top {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin .input-group-bottom {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.img-auth-logo {
+  margin-bottom: 30px;
+}
+
+.img-select-logo {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-height: 52px;
+  max-width: 220px;
+}
+
+/****************
+ * Card styles *
+ ****************/
+
+.card {
+  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1) inset,
+    0 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.background-light .card {
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #dddfe4;
+}
+
+.card-lg > .card-heading,
+.card-lg > .card-body,
+.card-lg > .card-footer {
+  padding: 20px;
+}
+
+.card h1,
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+.card-body h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.card-default .card-heading {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Custom Breadcrumb Styling */
+.custom-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.custom-nav > li > a {
+  border: none;
+  color: #fff;
+  border-bottom: 3px solid transparent !important;
+}
+
+.custom-nav span {
+  color: #727a8e;
+}
+
+.custom-nav > li.active > a,
+.custom-nav a:hover,
+.custom-nav a:focus {
+  color: #3196b2 !important;
+  background-color: transparent !important;
+  border-color: transparent transparent #3196b2 transparent !important;
+}
+
+.custom-nav .nav-link:hover,
+.custom-nav .nav-link:focus {
+  border-color: transparent !important;
+}

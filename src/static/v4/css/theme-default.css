@@ -1,0 +1,385 @@
+@import url(suite.css);
+
+/* CSG ACTUARIAL TOOLS - DEFAULT COLORS
+------------------------------- */
+
+/***********************************************************************************************************************
+/* VERSION 4 - BOOTSTRAP COMPONENT THEMING
+/**********************************************************************************************************************/
+
+/*
+Components
+*/
+
+.card-header {
+  background-color: #393f4f;
+  color: white;
+}
+
+/***********************************************************************************************************************
+/* VERSION 4 - CUSTOM COMPONENT THEMING
+/**********************************************************************************************************************/
+
+body {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.sidebar-dark .nav-link,
+.sidebar-dark .nav-link:hover,
+.sidebar-dark .nav-link.active {
+  color: rgba(255, 255, 255, 1);
+}
+.sidebar-dark .nav-link i {
+  color: #727a8e; /* rgba(255,255,255,0.33) */
+}
+.sidebar-dark .nav-link:hover,
+.sidebar-dark .nav-link.active {
+  background-color: #393f4f; /* rgba(255,255,255,0.15); */
+}
+
+.sidebar-light .nav-link,
+.sidebar-light .nav-link:hover,
+.sidebar-light .nav-link.active {
+  color: rgba(0, 0, 0, 0.65);
+}
+.sidebar-light .nav-link i {
+  color: rgba(0, 0, 0, 0.15);
+}
+.sidebar-light .nav-link:hover,
+.sidebar-light .nav-link.active {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.sidebar hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.h-emphasis {
+  background: rgba(0, 0, 0, 0.025);
+  padding: 0.5rem 1rem;
+  border-left: 4px solid;
+}
+
+.bg-black-25 {
+  background: rgba(0, 0, 0, 0.25);
+}
+.bg-black-10 {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/***********************************************************************************************************************
+/* VERSION 3
+/**********************************************************************************************************************/
+/* * * * * * * * * *
+ * GLOBAL STYLING  *
+ * * * * * * * * * */
+body {
+  background: #dddfe4;
+}
+
+hr {
+  border-top: 1px solid #ced0d5;
+}
+
+.well,
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control,
+.breadcrumb {
+  background-color: #ced0d5;
+  border-color: #b1b6c1;
+}
+
+input {
+  accent-color: #3196b2;
+}
+
+.breadcrumb > .active {
+  color: #727a8e;
+}
+
+.breadcrumb > li + li:before {
+  color: #b1b6c1;
+}
+
+.btn-default {
+  background-color: #f1f2f4;
+  border-color: rgba(114, 122, 142, 0.4);
+  color: #727a8e;
+}
+.btn-default:hover,
+.panel-default > .panel-heading .btn-default:hover {
+  background-color: #727a8e;
+  border-color: #727a8e;
+  color: #fff;
+}
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #393f4f;
+  border-color: #f1f2f4;
+}
+.panel-default > .panel-heading .btn-default {
+  color: #fff;
+  background-color: transparent;
+}
+.panel-footer {
+  background-color: #f1f2f4;
+  border-top-color: #dddfe4;
+}
+.panel-body + .panel-body {
+  border-top: 1px solid #dddfe4;
+}
+.panel .list-group-item {
+  background-color: #f1f2f4;
+  border-color: #dddfe4;
+  color: #727a8e;
+}
+/*.panel .list-group-item:hover {*/
+/*background-color: #fff;*/
+/*color: #727a8e;*/
+/*}*/
+.panel .list-group-item.active {
+  background-color: #fff;
+  color: #3196b2;
+}
+.panel .list-group-item.active:hover {
+  border-color: #dddfe4;
+}
+.panel .list-group-item.list-group-item-success {
+  color: #7fa634;
+  background-color: #c5de95;
+}
+
+.panel-footer .badge {
+  color: inherit;
+  border: 1px solid #dddfe4;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th {
+  background-color: #f1f2f4;
+  border-color: #dddfe4;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #f1f2f4;
+  color: #727a8e;
+}
+.position-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 900;
+  top: 56px;
+}
+
+/* * * * * * *
+ * TITLEBAR  *
+ * * * * * * */
+.titlebar {
+  background-color: #f1f2f4;
+  color: #727a8e;
+}
+
+/* * * * * * * * * * * *
+ * SIDEBAR DARK STYLES *
+ * * * * * * * * * * * */
+.sidebar.sidebar-dark {
+  color: #727a8e;
+  background-color: #191e28;
+  border-color: #10141a;
+}
+.sidebar.sidebar-dark .sidebar-brand {
+  background-color: #393f4f;
+  border-bottom: 1px solid #191e28;
+  box-shadow: 0 5px 10px 5px #191e28;
+}
+.sidebar.sidebar-dark .list-group-item {
+  background-color: #393f4f;
+  color: #dddfe4;
+  border-color: #181e28;
+}
+.sidebar.sidebar-dark .list-group-item small,
+.panel .panel-heading small {
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidebar.sidebar-dark hr {
+  border-color: rgba(57, 63, 79, 0.4);
+}
+.sidebar-dark .sidebar-brand .dropdown-menu {
+  background-color: #393f4f;
+}
+.sidebar-brand .dropdown-menu > li > a {
+  color: #727a8e;
+}
+.sidebar-dark .sidebar-brand .dropdown-menu .divider,
+.sidebar-dark .sidebar-brand .dropdown-menu a:hover {
+  background-color: #191e28;
+}
+.sidebar-dark .sidebar-brand .dropdown-header {
+  color: #727a8e;
+}
+
+/*
+ * SIDEBAR VIEW BUTTONS (QUOTE LIST)
+ */
+.sidebar-dark .nav-link.active i {
+  color: #7fa634;
+}
+.sidebar-dark .nav-tabs > li.active > a,
+.sidebar-dark .nav-tabs > li.active > a:hover,
+.sidebar-dark .nav-tabs > li.active > a:focus,
+.sidebar-dark .nav-tabs > li > a:hover {
+  background-color: #f1f2f4;
+  color: #393f4f;
+}
+.sidebar-dark .sidebar-toggle {
+  background-color: #10141a;
+  box-shadow: 0 -5px 10px 5px #191e28;
+}
+.sidebar.sidebar-dark .btn-default {
+  color: #dddfe4;
+  background-color: #393f4f;
+  border-color: #191e28;
+}
+.sidebar.sidebar-dark .btn-default:hover,
+.sidebar.sidebar-dark .btn-default:focus,
+.sidebar.sidebar-dark .btn-default.active,
+.sidebar.sidebar-dark li.active .btn-default {
+  color: #fff;
+  background-color: #565d6f;
+  border-color: #191e28;
+}
+.sidebar.sidebar-dark .btn-group :hover i {
+  color: #fff !important;
+}
+.sidebar.sidebar-dark .card {
+  background-color: #10141a;
+  border-color: transparent;
+}
+.sidebar.sidebar-dark .btn-primary {
+  background-color: #727a8e;
+  border-color: #191e28;
+}
+.sidebar.sidebar-dark .btn-primary:hover {
+  background-color: #7fa634;
+  border-color: #393f4f;
+}
+
+/* * * * * * * * * * * * *
+ * SIDEBAR LIGHT STYLES  *
+ * * * * * * * * * * * * */
+
+.sidebar.sidebar-light {
+  color: #727a8e;
+  background-color: #f1f2f4;
+  border-right: 1px solid #c1c2c6;
+}
+.sidebar.sidebar-light .sidebar-brand {
+  background-color: #fff;
+  border-bottom: 1px solid #dddfe4;
+  /*box-shadow: 0 3px 8px 3px #f1f2f4;*/
+  box-shadow: 0 1px 1px rgba(50, 50, 50, 0.1);
+}
+.sidebar.sidebar-light .list-group-item {
+  background-color: #fff;
+  color: #727a8e;
+  border-color: #dddfe4;
+}
+.sidebar.sidebar-light .list-group-item small {
+  color: rgba(114, 122, 142, 0.4);
+}
+.sidebar.sidebar-light hr {
+  border-color: rgba(50, 50, 50, 0.1);
+}
+
+/*
+ * NAV SIDEBAR BUTTONS
+ */
+.sidebar-light .nav-link {
+  color: #727a8e;
+}
+.sidebar-light .nav-link:hover,
+.sidebar-light .nav-link:focus,
+.sidebar-light .nav-link.active {
+  background-color: #dddfe4;
+}
+.sidebar-light
+  .nav-link
+  i:not(.text-primary):not(.text-warning):not(.text-success) {
+  color: #b1b6c1;
+}
+
+/*
+ * SIDEBAR VIEW BUTTONS (QUOTE LIST)
+ */
+.sidebar-light .nav-link.active i {
+  color: #7fa634;
+}
+.sidebar-light .nav-tabs > li.active > a,
+.sidebar-light .nav-tabs > li.active > a:hover,
+.sidebar-light .nav-tabs > li.active > a:focus,
+.sidebar-light .nav-tabs > li > a:hover {
+  background-color: #f1f2f4;
+  color: #393f4f;
+}
+.sidebar-light .sidebar-toggle {
+  background-color: #ced0d5;
+  /*box-shadow: 0 -3px 8px 3px #f1f2f4;*/
+  box-shadow: 0 -2px 1px rgba(50, 50, 50, 0.1);
+  border-top: 1px solid #f1f2f4;
+}
+.sidebar-light .sidebar .btn-default {
+  color: #727a8e;
+  background-color: #dddfe4;
+  border-color: #ced0d5;
+}
+.sidebar.sidebar-light .btn-default:hover,
+.sidebar.sidebar-light .btn-default:focus,
+.sidebar.sidebar-light li.active .btn-default {
+  color: #727a8e;
+  background-color: #fff;
+  border-color: #ced0d5;
+}
+.sidebar.sidebar-light .btn-group:not(.btn-group-fixed) :hover .fa {
+  color: #727a8e;
+}
+.sidebar.sidebar-light .well {
+  background-color: #ced0d5;
+  border-color: transparent;
+}
+.sidebar.sidebar-light .btn-primary {
+  background-color: #727a8e;
+  border-color: #dddfe4;
+}
+.sidebar.sidebar-light .btn-primary:hover {
+  background-color: #a1cd51;
+  border-color: #dddfe4;
+}
+
+/* * * * *
+ * E-APP *
+ * * * * */
+
+.field {
+  position: relative;
+}
+.field.list-indent-one .list-character,
+.field.list-indent-two .list-character,
+.field.list-indent-three .list-character {
+  position: absolute;
+  left: 0;
+}
+.field.list-indent-one,
+.field.list-indent-two,
+.field.list-indent-three {
+  padding-left: 30px;
+}
+.field.list-indent-two {
+  margin-left: 30px;
+}
+.field.list-indent-three {
+  margin-left: 60px;
+}
