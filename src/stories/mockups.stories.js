@@ -7,6 +7,7 @@ import List from "../components/List";
 import ListItem from "../components/ListItem";
 import Avatar from "../components/Avatar";
 import Modal from "../components/Modal";
+import CheckGroup from "../components/CheckGroup";
 
 export default {
   title: "Mockups",
@@ -317,6 +318,89 @@ export const CSG5685 = (args) => (
               </div>
             </div>
           </div>
+          <div className="row">
+            <div className="col">
+              <Formgroup
+                formElement="multiselect"
+                inputID="filter"
+                inputLabel="Filters"
+                isMulti
+                onClick={function noRefCheck(){}}
+                selectOptions={[
+                  {
+                    label: 'Carrier',
+                    value: 'a'
+                  },
+                ]}
+              />
+            </div>
+            <div className="col">
+              <div className="form-row align-items-center">
+                <div className="col">
+                  <Formgroup
+                    formElement="input"
+                    textfieldType="text"
+                    inputID="includedCarriers"
+                    inputLabel="In-Patient Copay (No Greater Than)"
+                    hasPrepend
+                    inputPrepend="$"
+                  />
+                </div>
+                <div className="col-2 text-right">
+                  <Button
+                    btnStyle="btn-link"
+                    btnClass="mt-3"
+                  >
+                    <Icon iconStyle="fas" iconName="fa-trash-alt" iconColor="text-danger" />{' '}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <Formgroup
+                formElement="multiselect"
+                inputID="filter"
+                inputLabel="Filters"
+                isMulti
+                onClick={function noRefCheck(){}}
+                selectOptions={[
+                  {
+                    label: 'Carrier',
+                    value: 'a'
+                  },
+                ]}
+              />
+            </div>
+            <div className="col">
+              <div className="form-row align-items-center">
+                <div className="col">
+                  <CheckGroup
+                    isInline
+                    checkGroupHeader="Pharmacy Coverage"
+                    options={[
+                      {
+                        label: "Full Match"
+                      },
+                      {
+                        label: "Partial"
+                      }
+                    ]}
+                  />
+                </div>
+                <div className="col-2 text-right">
+                  <Button
+                    btnStyle="btn-link"
+                    btnClass="mt-3"
+                  >
+                    <Icon iconStyle="fas" iconName="fa-trash-alt" iconColor="text-danger" />{' '}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Button
             btnStyle="btn-link"
             b
