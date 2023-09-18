@@ -1,0 +1,307 @@
+/*
+  Styles for old, out of date elements
+*/
+
+.btn-default {
+  background-color: #f1f2f4;
+  border-color: rgba(114, 122, 142, 0.4);
+  color: #727a8e;
+}
+
+.btn-default:hover, .panel-default > .panel-heading .btn-default:hover {
+  background-color: #727a8e;
+  border-color: #727a8e;
+  color: #fff;
+}
+
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #393f4f;
+  border-color: #F1F2F4;
+}
+
+.panel-default > .panel-heading .btn-default {
+  color: #fff;
+  background-color: transparent;
+}
+
+.panel-footer {
+  background-color: #f1f2f4;
+  border-top-color: #dddfe4;
+}
+
+.panel-quote .card-footer {
+  padding: 5px 15px;
+}
+
+.panel-body + .panel-body {
+  border-top: 1px solid #dddfe4;
+}
+
+.panel .list-group-item {
+  background-color: #f1f2f4;
+  border-color: #dddfe4;
+  color: #727a8e;
+}
+
+.panel .list-group-item.active {
+  background-color: #fff;
+  color: #3196b2;
+}
+
+.panel .list-group-item.active:hover {
+  border-color: #dddfe4;
+}
+
+.panel .list-group-item.list-group-item-success {
+  color: #7fa634;
+  background-color: #c5de95;
+}
+
+.panel-footer .badge {
+  color: inherit;
+  border: 1px solid #dddfe4;
+}
+
+.panel-universal > .card-header {
+  background-color: #9A7BEF !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.panel-universal {
+  border-color: #A997EF;
+}
+
+.panel-universal > .card-header + .panel-collapse > .card-body {
+  border-top-color: #A997EF;
+}
+
+.panel-universal > .card-header .badge {
+  color: #C4ACEF;
+  background-color: #9A7BEF;
+}
+
+.panel-universal > .card-footer + .panel-collapse > .card-body {
+  border-bottom-color: #9A7BEF;
+}
+
+/* QUOTE PANEL HEADING */
+.panel-quote > .card-header {
+  padding: 0;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.143em;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: font-size .3s ease 0s;
+  transition: font-size .3s ease 0s;
+}
+
+.panel-quote > .card-header.collapsed {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  box-shadow: inherit;
+  border-bottom: 0;
+}
+
+.panel-quote > .card-header > .row {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: inherit;
+}
+
+.panel-quote > .card-header > .row > div:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.panel-quote-price,
+.table-quote-price {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.panel-quote-price > small {
+  color: #f0f0f0;
+  font-weight: normal;
+}
+
+.panel-quote > .card-header .btn.btn-link {
+  box-shadow: none;
+  padding: 0 8px;
+}
+
+.panel-quote > .card-header .btn.btn-link:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .card-header > .row > div:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: inherit;
+  }
+
+  .card-header > .row > div:last-child {
+    border-top-right-radius: inherit;
+  }
+
+  .panel-quote > .card-header .btn.btn-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.quote-selected > .card-header {
+  background-color: #7fa634 !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.panel-quote.select_plan .card-header {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.panel-quote.loading > .card-header {
+  background-color: #727a8e;
+  padding: 2px 0;
+}
+
+.panel-quote > .card-header .fas,
+.panel-quote > .card-header .far {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.panel-quote .card-header .panel-quote-price,
+.panel-quote .card-header .panel-quote-company {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.panel-doc > .card-header.no-link-heading {
+  cursor: default !important;
+}
+
+/* QUOTE PANEL BODY */
+.panel-quote > .card-body hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.panel-quote > .card-body .lead,
+.table-comparison .lead {
+  margin-bottom: 15px;
+}
+
+.panel-quote .card-body + .card-body {
+  border-top: 1px solid #ddd;
+}
+
+.panel-quote .table > thead > tr > th,
+.panel-quote .table > tbody > tr > th,
+.panel-quote .table > tfoot > tr > th,
+.panel-quote .table > thead > tr > td,
+.panel-quote .table > tbody > tr > td,
+.panel-quote .table > tfoot > tr > td {
+  padding: 5px 15px;
+}
+
+.panel-quote > .card-body div span {
+  color: #2b829b;
+  font-weight: bold;
+}
+
+.panel-quote > .card-body .well span {
+  color: #fff;
+}
+
+.panel-quote > .card-body h5 {
+  font-weight: bold;
+}
+
+.btn-lock {
+  color: #ccc;
+  background-color: #eee;
+  box-shadow: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.panel-quote .table {
+  margin-bottom: 0;
+}
+
+.panel-quote > .card-body .badge {
+  background-color: #BDC1CA;
+  white-space: normal;
+}
+
+.panel-quote > .card-body .label-default {
+  background-color: #727a8e;
+}
+
+.padding-lg {
+  padding: 30px 30px 15px 30px;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+/* used on the dashboard tools, should be replaced with mb-0 */
+#tools-list img {
+  margin-bottom: 10px;
+}
+
+.row-alt-heading {
+  min-height: 100px;
+  /*background: #393F4F url('/static/img/auth/auth-bg.png') top center repeat;*/
+  background-size: 69px 100px;
+  margin-bottom: 30px;
+  color: #fff;
+  padding: 45px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #f1f2f4;
+}
+
+.row-alt-heading a:not(.btn) {
+  color: #60bcd7;
+}
+
+.list-group-iconic .list-group-item {
+  position: relative;
+  padding-right: 40px;
+}
+
+.list-group-iconic .list-group-item > .list-group-item-icon {
+  line-height: 20px; /* same as list-group-item */
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.card-footer-toolbar {
+  padding: 0;
+  background-color: #f1f2f4;
+  border-color: #dddfe4;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.card-footer-toolbar .btn.btn-info {
+  background-color: #f1f2f4;
+  color: #727a8e;
+  border: none;
+  margin-right: 1px;
+  border-right: 1px solid #dddfe4 !important;
+}
+
+.card-footer-toolbar .btn.btn-info:hover {
+  background-color: #727a8e;
+  color: #fff;
+}
