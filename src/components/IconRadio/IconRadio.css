@@ -1,0 +1,16 @@
+.btn-outline-primary:hover {
+  color: #3196b2 !important;
+  background-color: #d6eaf0 !important;
+}
+
+.btn-outline-primary.disabled:hover,
+.btn-outline-primary:disabled:hover {
+  background-color: transparent !important;
+}
+
+.btn-outline-primary.active{
+  color: #fff !important;
+  background-color: #297d94 !important;
+}
+.btn-outline-primary.active:hover{
+}

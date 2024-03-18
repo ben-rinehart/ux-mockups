@@ -1,0 +1,8 @@
+.input-group-top{
+  margin-bottom: -1px;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.input-group-bottom{
+  border-radius: 0 0 0.25rem 0.25rem;
+}

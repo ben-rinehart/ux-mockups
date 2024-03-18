@@ -23,7 +23,7 @@ export default function CheckBlock({
       checkboxValue={checkblockValue}
       checkboxName={checkblockName}
       checkboxLabel={checkblockLabel}
-      checkboxClass={`list-group-item px-5 py-4 ${checkIsChecked ? "checked" : ""}`}
+      checkboxClass={`list-group-item checkblock ${checkIsChecked ? "checked" : ""}`}
       onChange={() => setIsChecked((prev) => !prev)}
       ischeckboxRequired={ischeckblockRequired}
       ischeckboxReadOnly={ischeckblockisReadOnly}

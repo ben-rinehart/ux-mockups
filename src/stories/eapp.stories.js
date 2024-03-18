@@ -1,29 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
 import Address from "../components/Address";
 import {
-    Avatar,
-    Badge,
-    Button,
-    ButtonGroup,
-    Card,
-    CheckBlock,
-    Checkbox,
-    Formgroup,
-    Icon,
-    IconCheck,
-    Leaders,
-    LeadersItem,
-    Link,
-    List,
-    ListItem,
-    Message,
-    Modal,
-    MultiSelect,
-    Note,
-    RadioBlockGroup,
-    Spinner,
-    Stat
+  Accordion,
+  Avatar,
+  Badge,
+  Button,
+  Card,
+  CheckBlock,
+  Formgroup,
+  Icon,
+  Link,
+  List,
+  ListItem,
+  Message,
+  Note, PageHeader,
+  RadioBlockGroup,
+  Stat
 } from "@csg_actuarial/csg-design";
+import {Row, Col} from "react-bootstrap";
+
 export default {
   title: "EAPP",
 }
@@ -95,15 +90,29 @@ export const Applications = (args) => (
 );
 
 export const ApplicantInformation = (args) => (
-  <div>
-    <div className="form-row">
-      <div className="col-12">
-        <h2>Applicant Information</h2>
-        <hr />
-      </div>
-    </div>
-    <div className="form-row">
-      <div className="col-lg-8">
+  <>
+    <PageHeader
+      headerText="Applicant Information"
+    />
+    <Row>
+      <Col lg={8}>
+        <Accordion allowMultipleOpen>
+          <div
+            isOpen
+            label="Section 1">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sagittis augue, ut bibendum velit. Pellentesque vitae lacinia ipsum, sed sagittis felis. Etiam consequat pharetra nibh, eu finibus ante sollicitudin et. Integer ac turpis imperdiet, tincidunt mi at, iaculis dui. Mauris at nunc eget turpis blandit aliquam sit amet at nibh. Aliquam eget leo ante. Donec sagittis nunc ac lorem porttitor, quis ultricies massa vulputate. Sed suscipit magna tempus felis ornare egestas. Cras et justo mattis odio sodales tempus.
+            </p>
+            <p>
+              Nullam et porttitor leo. Proin at malesuada tortor, rhoncus eleifend justo. Cras euismod ullamcorper fringilla. Vestibulum velit metus, dictum at lobortis nec, pretium sit amet dolor. Nullam in nibh sed leo porttitor placerat. Donec ultrices rutrum tellus sed feugiat. Pellentesque sed nulla varius, elementum diam at, dapibus velit. Proin molestie dolor sit amet laoreet eleifend. Cras diam risus, facilisis eu ex non, feugiat laoreet ex. Ut fringilla aliquam velit non lobortis. Ut ac volutpat nulla. Nulla in ullamcorper ex. Maecenas sit amet urna pulvinar, posuere lectus sit amet, tempor ex.
+            </p>
+          </div>
+          <div label="Required Disclosures">
+          </div>
+          <div label="Section 3">
+
+          </div>
+        </Accordion>
         <Card>
           <div className="form-group">
             <CheckBlock
@@ -172,18 +181,12 @@ export const ApplicantInformation = (args) => (
               ]}
             />
 
-          <Card cardClass="bg-light">
-            <div className="float-left pr-3">
-              <Avatar
-                avatarBgColor="bg-white"
-                avatarTxtColor="text-info"
-                avatarShape="rounded-circle"
-              >
-                <Icon iconStyle="fas" iconName="fa-comment" />
-              </Avatar>
-            </div>
+          <Message
+            messageType="primary"
+            messageIcon="fa-comment"
+          >
             During the enrollment, I'll be reviewing some information and asking you several questions. Please answer clearly with a Yes or No. If you have any questions, please feel free to let me know.
-          </Card>
+          </Message>
 
           <Formgroup
             formElement="input"
@@ -231,18 +234,13 @@ export const ApplicantInformation = (args) => (
               }
             ]}
           />
-          <Card cardClass="bg-light">
-            <div className="float-left pr-3">
-              <Avatar
-                avatarBgColor="bg-white"
-                avatarTxtColor="text-info"
-                avatarShape="rounded-circle"
-              >
-                <Icon iconStyle="fas" iconName="fa-comment" />
-              </Avatar>
-            </div>
+
+          <Message
+            messageType="primary"
+            messageIcon="fa-comment"
+          >
             It is important that we can reach you to help you stay informed and take care of your health. Please provide your telephone number and email address.
-          </Card>
+          </Message>
           <Formgroup
             formElement="input"
             textfieldType="tel"
@@ -253,18 +251,13 @@ export const ApplicantInformation = (args) => (
             textfieldType="email"
             inputLabel="Email Address"
           />
-          <Card cardClass="bg-light">
-            <div className="float-left pr-3">
-              <Avatar
-                avatarBgColor="bg-white"
-                avatarTxtColor="text-info"
-                avatarShape="rounded-circle"
-              >
-                <Icon iconStyle="fas" iconName="fa-comment" />
-              </Avatar>
-            </div>
+
+          <Message
+            messageType="primary"
+            messageIcon="fa-comment"
+          >
             There may be times when Humana will use an automated system to call or text you. When that happens we will be sure to use the telephone number you provided. By providing your email address, you authorize Humana to send you health information to this address.
-          </Card>
+          </Message>
 
           <Address />
           <Formgroup
@@ -455,22 +448,17 @@ export const ApplicantInformation = (args) => (
               }
             ]}
           />
-          <Card cardClass="bg-light rounded">
-            <div className="float-left pr-3">
-              <Avatar
-                avatarBgColor="bg-white"
-                avatarTxtColor="text-info"
-                avatarShape="rounded-circle"
-              >
-                <Icon iconStyle="fas" iconName="fa-comment" />
-              </Avatar>
-            </div>
+
+          <Message
+            messageType="primary"
+            messageIcon="fa-comment"
+          >
             Please call a licensed Humana sales agent at 1-800-833-2367 (TTY: 711) if you need information in another format or language.
-          </Card>
+          </Message>
           <code className="float-right">MULTIPLAN_10CSG_2022</code>
         </Card>
-      </div>
-      <div className="col-lg-3 position-fixed offset-lg-8 d-none d-lg-block">
+      </Col>
+      <Col lg={3} className="position-fixed offset-lg-8 d-none d-lg-block">
 
         <div className="">
           <Card cardClass="bg-primary text-white">
@@ -501,12 +489,12 @@ export const ApplicantInformation = (args) => (
             <Link linkClass="list-group-item text-muted"><div className="float-right"><Icon iconStyle="fas" iconName="fa-lock" isFixedWidth /></div> Signature</Link>
           </List>
         </div>
-      </div>
-    </div>
+      </Col>
+    </Row>
     <Card cardClass="bg-light">
       <Button btnStyle="btn-primary" btnClass="float-right">Continue</Button>
     </Card>
-  </div>
+  </>
 );
 
 export const ElectionInformation = (args) => (

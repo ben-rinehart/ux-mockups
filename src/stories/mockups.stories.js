@@ -31,6 +31,8 @@ import {
 import Address from "../components/Address";
 import Multifield from "../components/Multifield";
 
+import "../static/upload.css";
+
 export default {
   title: "Mockups",
 }
@@ -690,157 +692,6 @@ export const EAPP5578 = (args) => (
   </>
 );
 
-export const AddAccount = (args) => (
-  <>
-    <div className="row">
-      <div className="col">
-        <h2>Add Account</h2>
-      </div>
-      <div className="col text-right">
-        <Button btnStyle="btn-secondary"><Icon iconStyle="fas" iconName="fa-user-secret" /> Impersonate</Button>
-      </div>
-    </div>
-    <hr />
-    <Card><Nav
-  isNavTabs
-  navID="simpleNavigation"
->
-  <Link
-    linkClass="nav-link"
-    isActive
-    linkHref="http://csgactuarial.com"
-  >
-    Profile
-  </Link>
-  <Link
-    linkClass="nav-link"
-    linkHref="http://csgactuarial.com"
-  >
-    Contact
-  </Link>
-  <Link
-    linkClass="nav-link"
-    linkHref="http://csgactuarial.com/about"
-  >
-    Portals
-  </Link>
-  <Link
-    linkClass="nav-link"
-    linkHref="http://csgactuarial.com/contact"
-  >
-    Settings
-  </Link>
-</Nav>
-      <div className="pt-3">
-      <div className="row">
-        <div className="col-4">
-          <Formgroup
-            formElement="input"
-            inputLabel="Full Name"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="Email"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="Password"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="Phone"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="Company/Agency"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="Website"
-          />
-        </div>
-        <div className="col">
-          <Formgroup
-            formElement="input"
-            inputLabel="Active Sessions"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="API Key"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="Recurly Account Code"
-          />
-          <Formgroup
-            formElement="input"
-            inputLabel="Feature Flags"
-          />
-          <Formgroup
-            formElement="textarea"
-            inputLabel="Notes"
-          />
-        </div>
-        <div className="col-4">
-          <Formgroup
-            formElement="input"
-            inputLabel="Auto-login to Portals"
-          />
-          Portal Memberships
-            <ul><li>CSG</li></ul>
-        <List>
-          <CheckBlock
-            checkblockID="bulk"
-            checkblockLabel="Bulk Quoting"
-            onChange={function noRefCheck(){}}
-          />
-          <CheckBlock
-            checkblockID="webapp"
-            checkblockLabel="Web Application Access"
-            isChecked
-            onChange={function noRefCheck(){}}
-          />
-          <CheckBlock
-            checkblockID="mobileapp"
-            checkblockLabel="Mobile Application Access"
-            onChange={function noRefCheck(){}}
-          />
-          <CheckBlock
-            checkblockID="cart"
-            checkblockLabel="Cart Enabled"
-            onChange={function noRefCheck(){}}
-          />
-          <CheckBlock
-            checkblockID="client"
-            checkblockLabel="Client Management"
-            onChange={function noRefCheck(){}}
-          />
-          <CheckBlock
-            checkblockID="persona"
-            checkblockLabel="Allow Persona Creation"
-            onChange={function noRefCheck(){}}
-          />
-          <CheckBlock
-            checkblockID="locked"
-            checkblockLabel="Account Locked"
-            onChange={function noRefCheck(){}}
-          />
-          <CheckBlock
-            checkblockID="recovery"
-            checkblockLabel="Reset Recovery Questions"
-            onChange={function noRefCheck(){}}
-          />
-        </List>
-        </div>
-      </div>
-      </div>
-    </Card>
-    <div className="text-right">
-      <Button btnStyle="btn-primary">Save Account</Button>
-    </div>
-  </>
-);
-
 export const AddressMock = (args) => (
   <>
       <Address />
@@ -879,420 +730,199 @@ export const AddressMock = (args) => (
   </>
 );
 
-export const Dash = (args) => {
-  const testStyle = {
-    backgroundColor: "DodgerBlue",
-  }
-  return (
-  <>
-      <h2>Welcome Mr. Business</h2>
-      <hr />
-    <div className="row">
-      <div className="col-8">
-        <div className="row">
-          <div className="col-12">
-            <ul className="list-group">
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
+export const Upload = (args) => (
+  <div className="row">
+    <div className="col-lg-8 offset-lg-2">
+      <div id="crm-root">
+        <div>
+          <a className="btn btn-link px-0 mb-1" href="/crm/clients/"><i className="fas fa-arrow-left"></i> My Clients</a>
+          <h2 className="flex-fill">Import Clients</h2>
+          <hr />
+        </div>
+        <h5>Upload Client Export File</h5>
+        <div role="presentation" tabIndex="0" className="dropzone">
+          <input multiple="" type="file" className="d-none" tabIndex="-1" />
+          <div id="drop-zone" className="upload-drop-zone p-3 card">
+            <div className="border border-info border-dashed rounded p-5 card-body">
+              <div className="text-center">
                 <Avatar
-                  avatarSize="csg-avatar-sm"
+                  avatarBgColor="bg-light"
                   avatarShape="rounded"
-                  avatarBgColor="bg-primary"
-                  avatarTxtColor="text-white"
-                >
-                  MS
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Medicare Supplement</b>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
-                <Avatar
-                  avatarSize="csg-avatar-sm"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-info"
-                  avatarTxtColor="text-white"
-                >
-                  MA
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Medicare Advantage / PDP</b>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
-                <Avatar
-                  avatarSize="csg-avatar-sm"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-dark"
-                  avatarTxtColor="text-white"
-                >
-                  FX
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Final Expense Life</b>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
-                <Avatar
-                  avatarSize="csg-avatar-sm"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-success"
-                  avatarTxtColor="text-white"
-                >
-                  <Icon iconStyle="fas" iconName="fa-hospital" />
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Hospital Indemnity</b>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
-                <Avatar
-                  avatarSize="csg-avatar-sm"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-warning"
-                  avatarTxtColor="text-white"
-                >
-                  <Icon iconStyle="fas" iconName="fa-tooth" />
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Dental &amp; Vision</b>
-                </div>
-              </a>
-            </ul>
-              <br />
-          </div>
-          <div className="col-12">
-            <ul className="list-group list-group-horizontal">
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
-                <Avatar
                   avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-primary"
-                  avatarTxtColor="text-white"
-                >
-                  MP
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Market Pulse</b>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-info"
-                  avatarTxtColor="text-white"
-                >
-                  ME
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Market Edge</b>
-                </div>
-              </a>
-              <a href="#" className="list-group-item list-group-item-action d-flex align-items-center">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-dark"
-                  avatarTxtColor="text-white"
-                >
-                  MR
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  <b>Market Reach</b>
-                </div>
-              </a>
-            </ul>
+                ><Icon iconStyle="fas" iconName="fa-upload" /></Avatar>
+                <p className="lead mt-3">Drag and drop your Excel or CSV export file here or click to <a href="#">Browse</a></p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="row d-none">
-          <div className="col-6">
-            <Link>
-              <Card cardBodyClass="d-flex">
-                <Avatar
-                  avatarSize="csg-avatar-sm"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-info"
-                  avatarTxtColor="text-white"
-                >
-                  MA
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  Medicare<br /> Advantage / PDP
-                </div>
-              </Card>
-            </Link>
-          </div>
-          <div className="col-6">
-            <Link>
-              <Card cardBodyClass="d-flex">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-dark"
-                  avatarTxtColor="text-white"
-                >
-                  FX
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  Final Expense Life
-                </div>
-              </Card>
-            </Link>
-          </div>
-          <div className="col-6">
-            <Link>
-              <Card cardBodyClass="d-flex">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-success"
-                  avatarTxtColor="text-white"
-                >
-                  <Icon iconStyle="fas" iconName="fa-hospital" />
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  Hospital Indemnity
-                </div>
-              </Card>
-            </Link>
-          </div>
-          <div className="col-6">
-            <Link>
-              <Card cardBodyClass="d-flex">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-secondary"
-                  avatarTxtColor="text-warning"
-                  hasBorder
-                  avatarBorderColor="border-warning"
-                >
-                  <Icon iconStyle="fas" iconName="fa-tooth" />
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  Dental &amp; Vision
-                </div>
-              </Card>
-            </Link>
-          </div>
-        </div>
-        <div className="row d-none">
-          <div className="col-4">
-            <Link>
-              <Card cardBodyClass="d-flex">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-info"
-                  avatarTxtColor="text-white"
-                >
-                  MP
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  Market Pulse
-                </div>
-              </Card>
-            </Link>
-          </div>
-          <div className="col-4">
-            <Link>
-              <Card cardBodyClass="d-flex">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-primary"
-                  avatarTxtColor="text-white"
-                >
-                  ME
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  Market Edge
-                </div>
-              </Card>
-            </Link>
-          </div>
-          <div className="col-4">
-            <Link>
-              <Card cardBodyClass="d-flex">
-                <Avatar
-                  avatarSize="csg-avatar-lg"
-                  avatarShape="rounded"
-                  avatarBgColor="bg-dark"
-                  avatarTxtColor="text-white"
-                >
-                  MR
-                </Avatar>
-                <div className="flex-fill pl-3 text-dark">
-                  Market Reach
-                </div>
-              </Card>
-            </Link>
-          </div>
-        </div>
-    <div className="row d-none">
-      <div className="col">
-        <Link linkClass="d-block text-center">
-          <Avatar
-            avatarSize="csg-avatar-lg"
-            avatarShape="rounded"
-            avatarBgColor="bg-primary"
-            avatarTxtColor="text-white"
-          >
-            MS
-          </Avatar><br />
-          MedSupp
-        </Link>
-      </div>
-      <div className="col">
-        <Link linkClass="d-block text-center">
-          <Avatar
-            avatarSize="csg-avatar-lg"
-            avatarShape="rounded"
-            avatarBgColor="bg-secondary"
-            avatarTxtColor="text-primary"
-            hasBorder
-            avatarBorderColor="bg-primary"
-          >
-            MA
-          </Avatar><br />
-          Medicare Advantage
-        </Link>
-      </div>
-      <div className="col">
-        <Link linkClass="d-block text-center">
-          <Avatar
-            avatarSize="csg-avatar-lg"
-            avatarShape="rounded"
-            avatarBgColor="bg-dark"
-            avatarTxtColor="text-white"
-          >
-            FEX
-          </Avatar><br />
-          Final Expense Life
-        </Link>
-      </div>
-      <div className="col">
-        <Link linkClass="d-block text-center">
-          <Avatar
-            avatarSize="csg-avatar-lg"
-            avatarShape="rounded"
-            avatarBgColor="bg-success"
-            avatarTxtColor="text-white"
-          >
-            <Icon iconStyle="fas" iconName="fa-hospital" />
-          </Avatar><br />
-          Hospital Indemnity
-        </Link>
-      </div>
-      <div className="col">
-        <Link linkClass="d-block text-center">
-          <Avatar
-            avatarSize="csg-avatar-lg"
-            avatarShape="rounded"
-            avatarBgColor="bg-info"
-            avatarTxtColor="text-white"
-          >
-            DV
-          </Avatar><br />
-          Dental &amp; Vision
-        </Link>
       </div>
     </div>
-      </div>
-      <div className="col-4">
-        <h5>E-Applications</h5>
-        <List>
-          <ListItem
-            hasPrePendIcon
-            prePendBG="bg-info"
-            iconColor="text-white"
-            iconStyle="fas"
-            iconName="fa-file-lines"
-            iconSize="fa-2x"
-          >
-            <small className="float-right">3/8/2023</small>
-            <b>Melvin Brooks</b><br />
-              Medicare Advantage {' '}
-              <Badge badgeType="badge-primary">NE</Badge>
-              <ProgressBar
-                progressType="warning"
-                progressWidth={25}
-              />
-          </ListItem>
-          <ListItem
-            hasPrePendIcon
-            prePendBG="bg-info"
-            iconColor="text-white"
-            iconStyle="fas"
-            iconName="fa-file-lines"
-            iconSize="fa-2x"
-          >
-            <small className="float-right">3/8/2023</small>
-            <b>John Johnson</b><br />
-              Medicare Supplement, Plan - G {' '}
-              <Badge badgeType="badge-primary">NE</Badge>
-              <ProgressBar
-                progressType="primary"
-                progressWidth={75}
-              />
-          </ListItem>
-        </List>
-        <Button btnStyle="btn-link" btnSize="btn-sm">View All</Button>
+  </div>
+);
 
-        <h5 className="mt-3">Clients</h5>
-        <List>
-          <ListItem
-            hasPrePendIcon
-            prePendBG="bg-primary"
-            iconColor="text-white"
-            iconStyle="fas"
-            iconName="fa-user"
-            iconSize="fa-2x"
-          >
-            <b>Myrtle Hawkins</b><br />
-            <small className="text-muted">
-              85 yo non-tobacco-using female
-              <span className="pl-3">
-                <Icon iconStyle="fas" iconName="fa-map-marker-alt" /> Palmyra, Nebraska
-              </span>
-            </small>
-          </ListItem>
-          <ListItem
-            hasPrePendIcon
-            prePendBG="bg-primary"
-            iconColor="text-white"
-            iconStyle="fas"
-            iconName="fa-user"
-            iconSize="fa-2x"
-          >
-            <b>Rodney Watkins</b><br />
-            <small className="text-muted">
-              66 yo tobacco-using male
-              <span className="pl-3">
-                <Icon iconStyle="fas" iconName="fa-map-marker-alt" /> Eagle, Nebraska
-              </span>
-            </small>
-          </ListItem>
-          <ListItem
-            hasPrePendIcon
-            prePendBG="bg-primary"
-            iconColor="text-white"
-            iconStyle="fas"
-            iconName="fa-user"
-            iconSize="fa-2x"
-          >
-            <b>Nathaniel Butler</b><br />
-            <small className="text-muted">
-              71 yo non-tobacco-using male
-              <span className="pl-3">
-                <Icon iconStyle="fas" iconName="fa-map-marker-alt" /> Elmwood, Nebraska
-              </span>
-            </small>
-          </ListItem>
-        </List>
-        <Button btnStyle="btn-link" btnSize="btn-sm">View All</Button>
+export const DragAndDrop = (args) => (
+  <>
+    <div className="row">
+      <div class="col-10 mx-auto">
+
+    <div className="modal-content">
+        <div className="modal-header">
+            <h4>Map Data Headers</h4>
+            <button type="button" className="close" aria-label="Close">&times;</button>
+        </div>
+        <div className="modal-body">
+
+          <div className="row">
+            <div className="col">
+              <h5>Column Headers <small className="text-muted pl-4">mock.xlsx</small></h5>
+            </div>
+            <div className="col text-right">
+              <Button btnStyle="btn-secondary" btnSize="btn-sm" btnClass="mb-1"><Icon iconStyle="fas" iconName="fa-undo" isFixedWidth /> Reset</Button>
+            </div>
+          </div>
+            <Card cardClass="bg-secondary">
+              <p>In order to ensure data integrity, please map the mismatched client data's column-header names from the imported file to the <strong>Client Manager platform's</strong> client property names.</p>
+
+                <div id="headers-imported" className="bg-light p-3 mb-2">
+                        <div data-rbd-droppable-id="-1" data-rbd-droppable-context-id="0" className="d-flex flex-wrap">
+                            <div className="border border-black-50 rounded bg-white m-1 py-1 px-2"
+                                 data-rbd-draggable-context-id="0" data-rbd-draggable-id="med_supp_plan" tabIndex="0"
+                                 role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                                 data-rbd-drag-handle-draggable-id="med_supp_plan" data-rbd-drag-handle-context-id="0"
+                                 draggable="false"><Icon iconStyle="fas" iconName="fa-grip-vertical" iconColor="text-muted" isFixedWidth /> med_supp_plan
+                            </div>
+                            <div className="border border-secondary rounded bg-white m-1 py-1 px-2"
+                                 data-rbd-draggable-context-id="0" data-rbd-draggable-id="med_supp_premium" tabIndex="0"
+                                 role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                                 data-rbd-drag-handle-draggable-id="med_supp_premium"
+                                 data-rbd-drag-handle-context-id="0" draggable="false"><Icon iconStyle="fas" iconName="fa-grip-vertical" iconColor="text-muted" isFixedWidth /> med_supp_premium
+                            </div>
+                            <div className="border border-secondary rounded bg-white m-1 py-1 px-2"
+                                 data-rbd-draggable-context-id="0" data-rbd-draggable-id="med_supp_company" tabIndex="0"
+                                 role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                                 data-rbd-drag-handle-draggable-id="med_supp_company"
+                                 data-rbd-drag-handle-context-id="0" draggable="false"><Icon iconStyle="fas" iconName="fa-grip-vertical" iconColor="text-muted" isFixedWidth /> med_supp_company
+                            </div>
+                            <div className="border border-secondary rounded bg-white m-1 py-1 px-2"
+                                 data-rbd-draggable-context-id="0" data-rbd-draggable-id="household_discount"
+                                 tabIndex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                                 data-rbd-drag-handle-draggable-id="household_discount"
+                                 data-rbd-drag-handle-context-id="0" draggable="false"><Icon iconStyle="fas" iconName="fa-grip-vertical" iconColor="text-muted" isFixedWidth /> household_discount
+                            </div>
+                        </div>
+                </div>
+
+              <Icon iconStyle="fas" iconName="fa-question-circle" iconColor="text-info" isFixedWidth /> Drag the unmapped <strong>Column Headers</strong> above onto the appropriate <strong>Client Properties</strong> listed below.
+            </Card>
+
+            <h5>Client Properties</h5>
+            <div className="row overflow-auto csg-scrollbox-lg">
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded"
+                         data-rbd-droppable-id="0" data-rbd-droppable-context-id="0">Address Line 1
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported name <code>address_line_1</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="1" data-rbd-droppable-context-id="0">Address Line 2
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>address_line_2</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="2" data-rbd-droppable-context-id="0">Date of Birth
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>date_of_birth</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="3" data-rbd-droppable-context-id="0">Household Discount
+                        <div className="p-4 my-2 text-primary text-center bg-light small rounded">Drop here to map column header</div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="4" data-rbd-droppable-context-id="0">Email Address
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>email</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="5" data-rbd-droppable-context-id="0">First Name
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>first_name</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="6" data-rbd-droppable-context-id="0">Gender
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>gender</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="7" data-rbd-droppable-context-id="0">Last Name
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>last_name</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="8" data-rbd-droppable-context-id="0">Phone
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>phone</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="9" data-rbd-droppable-context-id="0">State
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>state</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="10" data-rbd-droppable-context-id="0">Tobacco Use
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>tobacco</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="11" data-rbd-droppable-context-id="0">Zip Code
+                        <div className="p-2 my-1 text-secondary bg-light small rounded">Imported
+                            name: <code>zip</code></div>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="12" data-rbd-droppable-context-id="0">Medicare Supplement Plan
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="13" data-rbd-droppable-context-id="0">Medicare Supplement Premium
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                    <div className="border border-info border-dashed p-3 mb-3 rounded" 
+                         data-rbd-droppable-id="14" data-rbd-droppable-context-id="0">Medicare Supplement Company
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="modal-footer">
+            <button type="button" className="btn btn-secondary">Cancel</button>
+            <button type="button" className="btn btn-primary">Map Headers &amp; Upload</button>
+        </div>
+    </div>
+
       </div>
     </div>
   </>
-  );
-};
+);

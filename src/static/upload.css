@@ -1,0 +1,17 @@
+.border-dashed{ border-style: dashed !important; }
+
+.upload-drop-zone > div,
+.upload-drop-zone > div .csg-avatar{
+  transition: all .25s;
+  cursor: grab;
+}
+
+.upload-drop-zone > div:hover{
+  border-color: #2E7FA1;
+  background-color: #EAF2F6;
+}
+
+.upload-drop-zone > div:hover .csg-avatar{
+    background-color: #2E7FA1 !important;
+    color: #fff !important;
+}

@@ -1,5 +1,54 @@
-.checked {
-  color: #194e5d !important;
-  background-color: #d6eaf0 !important;
-  border: 1px solid #3196b2 !important;
+.checkblock{
+  background-color: rgba(255,255,255,.25);
+  border: none;
+  padding: .45rem .45rem .45rem 2.5rem;
+}
+.checkblock:active{
+  background-color: rgba(255,255,255,.4);
+}
+
+.checkblock label{
+  cursor: pointer;
+}
+
+.checkblock input:disabled+label{
+  cursor: not-allowed;
+}
+
+.checkblock:not(:first-child){
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.card .checkblock{
+  background-color: rgba(0,0,0,.05);
+}
+.card .checkblock:active{
+  background-color: rgba(0,0,0,.075);
+}
+
+.list-group-horizontal-lg .checkblock:not(:first-child) {
+  border-top: none;
+  border-left: 1px solid rgba(0,0,0,.05);
+}
+
+.card .checkblock:not(:first-child),
+.card .list-group-horizontal-lg .checkblock:not(:first-child) {
+  border-color: #fff;
+}
+
+.checkblock label{
+  display: block;
+}
+
+.checkblock input{
+  display: none;
+}
+
+.checkblock.checked::before{
+  content: "\f00c";
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #3196b2;
+  position: absolute;
+  left: .75rem;
 }

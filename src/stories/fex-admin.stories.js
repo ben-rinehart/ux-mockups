@@ -3,13 +3,10 @@ import {
     Avatar,
     Badge,
     Button,
-    ButtonGroup,
     Card,
-    CheckBlock, Dropdown,
     Formgroup,
-    Header,
     Icon,
-    IconCheck, Image,
+    Image,
     Leaders,
     LeadersItem,
     Link,
@@ -17,18 +14,17 @@ import {
     ListItem,
     Message,
     Modal,
-    MultiSelect,
-    Nav,
-    Note,
+    PageHeader,
     RadioBlockGroup,
     Spinner,
-    Switch,
     Textfield
 } from "@csg_actuarial/csg-design";
 
 import allied from "../static/img/logos/allied.png";
-import wpa from "../static/img/logos/wpa.png";
-import placeholder from "../static/img/logos/placeholder.png";
+// import wpa from "../static/img/logos/wpa.png";
+// import placeholder from "../static/img/logos/placeholder.png";
+
+import { Row, Col } from "react-bootstrap";
 
 export default {
   title: "Final Expense Admin",
@@ -158,7 +154,7 @@ export const DownloadFailed = (args) => (
           messageHeader="Download Failed"
           messageIcon="fa-exclamation-triangle"
           messageType="danger"
-        ></Message>
+        >E1235</Message>
         <List>
           <Link linkHref="#" linkClass="list-group-item list-group-item-action nav-link d-flex">
             <Avatar
@@ -208,42 +204,68 @@ export const DownloadFailed = (args) => (
   </div>
 );
 
+export const NoCarriers = (args) => (
+  <>
+    <Row className="justify-content-center">
+      <Col lg={7}>
+        <PageHeader
+          headerText="Carriers"
+          hasActions
+          actionOptions={[
+            {
+              btnStyle: 'btn-secondary',
+              iconName: 'fa-plus',
+              iconStyle: 'fas',
+              btnText: 'Add Carrier',
+              btnClass: 'mr-2',
+            },
+            {
+              btnStyle: 'btn-secondary',
+              iconName: 'fa-file-arrow-up',
+              iconStyle: 'fas',
+              btnText: 'Upload Carriers'
+            },
+          ]}
+        />
+        <div className="text-center p-5">
+          <Avatar
+            avatarBgColor="bg-info"
+            avatarTxtColor="text-white"
+            avatarShape="rounded-circle"
+            avatarSize="csg-avatar-lg"
+          >
+            <Icon iconStyle="fas" iconName="fa-question" iconClass="fa-bounce" />
+          </Avatar>
+          <p className="display-4 mt-3">No Carriers Found</p>
+          <p>Please <Link>Add a Carrier</Link> or <Link>Upload Carriers</Link> to see them listed here.</p>
+        </div>
+      </Col>
+    </Row>
+  </>
+);
 export const Carriers = (args) => (
-  <div>
-    <div className="row">
-      <div className="col-lg-6 mx-auto">
-        <div className="row">
-          <div className="col">
-            <h2>Carriers</h2>
-          </div>
-          <div className="col text-right">
-            <Button btnStyle="btn-secondary"><Icon iconStyle="fas" iconName="fa-file-arrow-up" /> Upload Carriers</Button>
-          </div>
-        </div>
-        <hr />
-        <Message
-          messageIcon="fa-info-circle"
-          messageType="info"
-          messageHeader="No Current Carriers"
-        >
-          Please <Link>Upload Carriers</Link> to see them listed here.
-        </Message>
-      </div>
-    </div>
-    <div className="text-center my-5">
-      <Icon iconStyle="fas" iconName="fa-arrow-down" iconSize="fa-3x" iconColor="text-black-50" />
-    </div>
-    <div className="row">
-      <div className="col-lg-6 mx-auto">
-        <div className="row">
-          <div className="col">
-            <h2>Carriers</h2>
-          </div>
-          <div className="col text-right">
-            <Button btnStyle="btn-secondary"><Icon iconStyle="fas" iconName="fa-file-arrow-up" /> Upload Carriers</Button>
-          </div>
-        </div>
-      <hr />
+  <>
+    <Row className="justify-content-center">
+      <Col lg={7}>
+        <PageHeader
+          headerText="Carriers"
+          hasActions
+          actionOptions={[
+            {
+              btnStyle: 'btn-secondary',
+              iconName: 'fa-plus',
+              iconStyle: 'fas',
+              btnText: 'Add Carrier',
+              btnClass: 'mr-2',
+            },
+            {
+              btnStyle: 'btn-secondary',
+              iconName: 'fa-file-arrow-up',
+              iconStyle: 'fas',
+              btnText: 'Upload Carriers'
+            },
+          ]}
+        />
       <table className="table table-striped bg-white">
         <thead>
           <tr>
@@ -346,20 +368,110 @@ export const Carriers = (args) => (
           </tr>
         </tbody>
       </table>
-      </div>
-    </div>
-  </div>
+      </Col>
+    </Row>
+  </>
 );
 
-export const UploadCarriers = (args) => (
-  <div>
-    <div className="row">
-      <div className="col-lg-6 mx-auto">
-        <Link><Icon iconStyle="fas" iconName="fa-arrow-left" /> Back</Link>
-        <h2>Upload Carriers</h2>
-        <hr />
+export const AddCarrier = (args) => (
+  <>
+    <Row className="justify-content-center">
+      <Col lg={6}>
+        <PageHeader
+          headerText="Add Carrier"
+          hasBack
+        />
         <Card>
-          <div className="my-4 text-center">
+          <div className="d-lg-flex align-items-center">
+              <div className="order-2 pl-3 text-center">
+                {/*placeholder*/}
+                <Avatar
+                  avatarShape="rounded-circle"
+                  avatarBgColor="bg-secondary"
+                  avatarTxtColor="text-info"
+                  avatarSize="csg-avatar-sm"
+                >
+                  <Icon iconStyle="fas" iconName="fa-image" />
+                </Avatar><br />
+                <Badge badgeType="badge-secondary">NO LOGO PROVIDED</Badge>
+                {/*placeholder*/}
+              </div>
+            <div className="order-1 flex-fill">
+              <Formgroup
+                formElement="input"
+                inputID="logo"
+                inputLabel="Logo"
+                textfieldType="file"
+                dataTID="carrierLogo"
+                inputHelperText="Should be a JPG or PNG file no larger than 150px wide by 50px tall."
+              />
+            </div>
+          </div>
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="Carrier Name"
+            dataTID="carrierName"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="NAIC"
+            dataTID="carrierNAIC"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="Entry Year"
+            dataTID="carrierEntryYear"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="AM Best"
+            dataTID="carrierAMBest"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="AM Best Outlook"
+            dataTID="carrierSPRating"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="Parent Company"
+            dataTID="carrierParentCompany"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="CSG Carrier Resource URL"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="Integrity Carrier Resource URL"
+          />
+        </Card>
+        <div className="text-right">
+          <Button btnStyle="btn-link" dataTID="cancelButton">Cancel</Button>
+          <Button btnStyle="btn-primary" dataTID="saveCarrierButton">Add Carrier</Button>
+        </div>
+      </Col>
+    </Row>
+  </>
+);
+export const UploadCarriers = (args) => (
+  <>
+    <Row className="justify-content-center">
+      <Col lg={6}>
+        <PageHeader
+          hasBack
+          headerText="Upload Carriers"
+        />
+        <Card>
+          <div className="my-5 text-center">
             <Avatar
               avatarBgColor="bg-primary"
               avatarShape="rounded-circle"
@@ -371,34 +483,35 @@ export const UploadCarriers = (args) => (
                 iconColor="text-white"
               />
             </Avatar>
-            <div className="form-row align-items-end">
-              <div className="col-lg-9">
+            <Row className="align-items-end">
+              <Col lg={8}>
                 <Formgroup
                   formElement="input"
                   inputID="fileID"
                   textfieldType="file"
                   dataTID="carrierFile"
                 />
-              </div>
-              <div className="col">
-                <Button btnStyle="btn-primary" btnClass="mb-3">Upload Carriers</Button>
-              </div>
-            </div>
+              </Col>
+              <Col>
+                <Button btnStyle="btn-primary" btnClass="mb-3" isFullWidth>Upload Carriers</Button>
+              </Col>
+            </Row>
           </div>
         </Card>
-      </div>
-    </div>
+      </Col>
+    </Row>
     <div className="text-center my-5">
       <Icon iconStyle="fas" iconName="fa-arrow-down" iconSize="fa-3x" iconColor="text-black-50" />
     </div>
 
-    <div className="row">
-      <div className="col-lg-6 mx-auto">
-        <Link><Icon iconStyle="fas" iconName="fa-arrow-left" /> Back</Link>
-        <h2>Upload Carriers</h2>
-        <hr />
+    <Row className="justify-content-center">
+      <Col lg={6}>
+        <PageHeader
+          hasBack
+          headerText="Upload Carriers"
+        />
         <Card>
-          <div className="my-4 text-center">
+          <div className="my-5 text-center">
             <Spinner />
             <div className="pt-4">Please be patient while 'carriers.csv' uploads.</div>
             <div className="form-row align-items-end d-none">
@@ -415,13 +528,13 @@ export const UploadCarriers = (args) => (
             </div>
           </div>
         </Card>
-      </div>
-    </div>
+      </Col>
+    </Row>
     <div className="text-center my-5">
       <Icon iconStyle="fas" iconName="fa-arrow-down" iconSize="fa-3x" iconColor="text-black-50" />
     </div>
-    <div className="row">
-      <div className="col-lg-6 mx-auto">
+    <Row className="justify-content-center">
+      <Col lg={6}>
         <Link><Icon iconStyle="fas" iconName="fa-arrow-left" /> Back</Link>
         <h2>Upload Carriers</h2>
         <hr />
@@ -433,11 +546,9 @@ export const UploadCarriers = (args) => (
             'carriers.csv' has uploaded successfully.<br />
             <Link>View Carriers</Link> or <Link>Upload More</Link>
         </Message>
-        <div className="text-right">
-        </div>
-      </div>
-    </div>
-  </div>
+      </Col>
+    </Row>
+  </>
 );
 
 export const CarrierDetails = (args) => {
@@ -488,22 +599,18 @@ export const CarrierDetails = (args) => {
             <LeadersItem
               leaderLabel="NAIC"
               leaderData="19100"
-              labelClass="text-muted"
             />
             <LeadersItem
-              leaderLabel="Entry Year"
-              leaderData="2023"
-              labelClass="text-muted"
+              leaderLabel="Years in Market"
+              leaderData="4"
             />
             <LeadersItem
               leaderLabel="AM Best"
               leaderData="best string"
-              labelClass="text-muted"
             />
             <LeadersItem
               leaderLabel="SP Rating"
               leaderData="5"
-              labelClass="text-muted"
             />
           </Leaders>
 
@@ -794,7 +901,8 @@ export const Products = (args) => (
                   iconName: 'fa-trash',
                   iconStyle: 'fas',
                   title: 'Delete',
-                  btnIconAnimate: 'csg-hover-bounce'
+                  btnIconAnimate: 'csg-hover-bounce',
+                  onClick: '{() => toggleSelected(!selected)}'
                 }
               ]}
             >
@@ -815,12 +923,13 @@ export const Products = (args) => (
 );
 
 export const EditCarrier = (args) => (
-  <div>
-    <div className="row">
-      <div className="col-lg-6 mx-auto">
-        <Link><Icon iconStyle="fas" iconName="fa-arrow-left" /> Back</Link>
-        <h2>Edit Carrier</h2>
-        <hr />
+  <>
+    <Row className="justify-content-center">
+      <Col lg={6}>
+        <PageHeader
+          headerText="Edit Carrier"
+          hasBack
+        />
         <Card>
           <div className="d-lg-flex align-items-center">
               <div className="order-2 pl-3 text-center">
@@ -828,7 +937,7 @@ export const EditCarrier = (args) => (
                 <Avatar
                   avatarShape="rounded-circle"
                   avatarBgColor="bg-secondary"
-                  avatarTxtColor="text-secondary"
+                  avatarTxtColor="text-info"
                   avatarSize="csg-avatar-sm"
                 >
                   <Icon iconStyle="fas" iconName="fa-image" />
@@ -874,7 +983,7 @@ export const EditCarrier = (args) => (
           <Formgroup
             formElement="input"
             textfieldType="text"
-            inputLabel="SP Rating"
+            inputLabel="AM Best Outlook"
             dataTID="carrierSPRating"
           />
           <Formgroup
@@ -883,27 +992,103 @@ export const EditCarrier = (args) => (
             inputLabel="Parent Company"
             dataTID="carrierParentCompany"
           />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="CSG Carrier Resource URL"
+          />
+          <Formgroup
+            formElement="input"
+            textfieldType="text"
+            inputLabel="Integrity Carrier Resource URL"
+          />
         </Card>
         <div className="text-right">
           <Button btnStyle="btn-link" dataTID="cancelEditCarrierButton">Cancel</Button>
           <Button btnStyle="btn-primary" dataTID="saveCarrierButton">Save Carrier</Button>
         </div>
-      </div>
-    </div>
-  </div>
+      </Col>
+    </Row>
+  </>
 );
 export const QuoteSearchHistory = (args) => (
-  <div>
-    <div className="row">
-      <div className="col-lg-8 mx-auto">
-        <Link><Icon iconStyle="fas" iconName="fa-arrow-left" /> Back</Link>
-        <div className="row">
-          <div className="col">
-            <h2>Quote Search History</h2>
-          </div>
-        </div>
-        <hr />
-      </div>
+  <div className="row">
+    <div className="col-lg-8 mx-auto">
+      <PageHeader
+        hasBack
+        headerText="Quote Search History"
+      />
+      <List>
+        <ListItem
+          hasPrePendIcon
+          prePendBG="bg-white"
+          iconColor="text-muted"
+          iconStyle="fas"
+          iconName="fa-clock-rotate-left"
+          iconSize="fa-2x"
+          listItemClass="align-items-center"
+
+          hasActions
+          isVerticalActions
+          actionOptions={[
+            {
+              btnStyle: 'csg-primary-ghost',
+              iconName: 'fa-angle-right',
+              iconStyle: 'fas',
+              title: 'Rerun Hospital Indemnity'
+            }
+          ]}
+        >
+          <b>Hospital Indemnity</b><br />
+          <small className="text-muted">11/5/2021</small>
+        </ListItem>
+        <ListItem
+          hasPrePendIcon
+          prePendBG="bg-white"
+          iconColor="text-muted"
+          iconStyle="fas"
+          iconName="fa-clock-rotate-left"
+          iconSize="fa-2x"
+          listItemClass="align-items-center"
+
+          hasActions
+          isVerticalActions
+          actionOptions={[
+            {
+              btnStyle: 'csg-primary-ghost',
+              iconName: 'fa-angle-right',
+              iconStyle: 'fas',
+              title: 'Rerun Hospital Indemnity'
+            }
+          ]}
+        >
+          <b>Medicare Advantage</b><br />
+          <small className="text-muted">11/5/2021</small>
+        </ListItem>
+        <ListItem
+          hasPrePendIcon
+          prePendBG="bg-white"
+          iconColor="text-muted"
+          iconStyle="fas"
+          iconName="fa-clock-rotate-left"
+          iconSize="fa-2x"
+          listItemClass="align-items-center"
+
+          hasActions
+          isVerticalActions
+          actionOptions={[
+            {
+              btnStyle: 'csg-primary-ghost',
+              iconName: 'fa-angle-right',
+              iconStyle: 'fas',
+              title: 'Rerun Hospital Indemnity'
+            }
+          ]}
+        >
+          <b>Medicare Supplement</b><br />
+          <small className="text-muted">11/5/2021</small>
+        </ListItem>
+      </List>
     </div>
   </div>
 );

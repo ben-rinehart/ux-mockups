@@ -10,6 +10,7 @@ import React from "react";
 
 export default function Formgroup({
   formElement,
+  hideLabel,
   inputTitle,
   inputLabel,
   inputTabIndex,
@@ -138,7 +139,7 @@ export default function Formgroup({
 
   return (
     <div className="form-group" title={inputTitle}>
-      <label htmlFor={inputID}>
+      <label htmlFor={inputID} className={` ${hideLabel ? "d-none" : ""}`}>
         {inputLabel}
         {isInputRequired && <sup className="text-danger">*</sup>}
       </label>
@@ -236,6 +237,7 @@ Formgroup.propTypes = {
     .isRequired,
   inputLabel: PropTypes.string,
   inputTitle: PropTypes.string,
+  hideLabel: PropTypes.bool,
   isInputRequired: PropTypes.bool,
   isInputReadOnly: PropTypes.bool,
   isInputInvalid: PropTypes.bool,

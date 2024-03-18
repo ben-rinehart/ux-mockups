@@ -1,0 +1,32 @@
+/* vertical tabs */
+.list-group-item-action{
+  transition: all .5s;
+}
+
+.list-group-item-action:not(.active):hover,
+.list-group-item-action:not(.active):focus{
+  background-color: rgba(49,149,178,.15);
+  cursor: pointer;
+}
+
+/* horizontal tabs */
+.nav-tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1px;
+}
+.nav-tabs .nav-link {
+  border: none;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom-color .5s;
+}
+.nav-tabs .nav-link:not(.active):hover,
+.nav-tabs .nav-link:not(.active):focus {
+  border-color: rgba(49, 150, 178, 0.5);
+  cursor: pointer;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #555c6e;
+  background-color: transparent;
+  border-color: #555c6e;
+}
