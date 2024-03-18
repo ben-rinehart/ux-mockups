@@ -110,3 +110,11 @@ export const Search = (args) => {
         </Row>
     )
 };
+
+export const Result = () => {
+    return(
+        <>
+            Testing
+        </>
+    );
+}
